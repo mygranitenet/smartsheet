@@ -1,28 +1,6 @@
-Absolutely. Here is the complete, final code for your multi-step dynamic reporting tool.
-
-This version incorporates the fix for the An invalid form control... is not focusable error by removing the required attribute from the chat textarea and relying on the improved JavaScript validation instead.
-
-Key Features of this Final Script:
-
-Step 1: Automatically lists all Smartsheet files you own that were modified in the last 24 hours.
-
-Step 2: After you select sheets, it fetches all unique column names from them and lets you choose which ones to report on.
-
-Step 3: Processes only the selected columns from the selected sheets, sends the data to Gemini for an initial report, and opens a fully functional chat interface for follow-up questions.
-
-Bug-Free Chat: The follow-up chat form is now correctly configured to avoid browser validation errors.
-
-Complete Code
-code
-PHP
-download
-content_copy
-expand_less
 
 <?php
 // --- Configuration ---
-const SMARTSHEET_ACCESS_TOKEN = 'WRCMeuYeC0iI88FuhI72NFvKXOFtqcsnv1VFz'; // IMPORTANT: Replace with your actual token
-const GEMINI_API_KEY = 'AIzaSyBTZB91O6J98CBCr2H0Ij7WHLOl9J1UM5w';       // IMPORTANT: Replace with your actual key
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=' . GEMINI_API_KEY;
 
 ini_set('display_errors', 1);
